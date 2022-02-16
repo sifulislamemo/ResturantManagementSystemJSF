@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>S I Restaurant</title>
+        <link rel="stylesheet" href="/css/style.css"></link>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></link>
+    </h:head>
+    <h:body>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light list">
+            <div class="container">
+                <a class="navbar-brand logo" href="add_menu.xhtml">S I Restaurant</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="add_menu.xhtml">Add Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="all_menu.xhtml">All Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="update_menu.xhtml">Update Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="customer_order.xhtml">Customer Order</a>
+                        </li>
+                        <li class="nav-item book-btn">
+                            <a class="nav-link" href="index.xhtml">LogOut</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar -->
+        <!-- update menu -->
+        <section class="vh-100 bg-image" style="background-image: url('images/banner/banner1.jpg');">
+            <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+                <div class="container h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                            <div class="card" style="border-radius: 15px;">
+                                <div class="card-body p-5">
+                                    <h2 class="text-uppercase text-center mb-5">Update Menu</h2>
+
+                                    <h:form enctype="multipart/form-data">
+
+                                        <div class="form-outline mb-2">
+                                            <h:outputLabel for="itemName" value="Item Name"/>
+                                            <h:inputHidden class="form-control" id="id" value="#{menu.id}"/>
+                                            <h:inputText class="form-control" id="itemName" value="#{menu.itemName}" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <h:outputLabel for="menuCategory" value="Menu Categories"/>
+                                            <h:selectOneMenu class="form-control" id="menuCategory" value="#{menu.menuCategory}">
+                                                <f:selectItem itemValue="--select--" itemLabel="--select--"/>
+                                                <f:selectItem itemValue="Burger" itemLabel="Burger"/>
+                                                <f:selectItem itemValue="Rice" itemLabel="Rice"/>
+
+                                            </h:selectOneMenu> 
+                                        </div>
+                                        <div class="form-group">
+                                            <h:outputLabel for="price" value="Price"/>
+                                            <h:inputText class="form-control" id="price" value="#{menu.price}"/>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <h:outputLabel for="menuStatus" value="Menu Status"/>
+                                            <h:selectOneMenu class="form-control" id="menuStatus" value="#{menu.status}">
+                                                <f:selectItem itemValue="--select--" itemLabel="--select--"/>
+                                                <f:selectItem itemValue="Available" itemLabel="Available"/>
+                                                <f:selectItem itemValue="Not_Available" itemLabel="Not Available"/> 
+                                            </h:selectOneMenu>
+                                        </div>
+                                        <div class="form-group">
+                                            <h:outputLabel for="photo" value="Upload Photo"/>
+                                            <h:inputFile class="form-control" id="photo" value="#{menu.file}" />
+                                        </div>
+                                        <div class="text-center">
+                                            <h:commandButton type="submit" class="btn btn-primary" value="Update"  action="#{menu.updateMenu(menu)}"></h:commandButton> <br/>
+                                        </div>
+
+
+                                    </h:form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- update menu -->
+
+        <!-- footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="about-us">
+                            <a href="#">S I Restaurant</a>
+                            <p>S I Restaurant Is A Popular Instrument of Folk Sufi Music In Kashmir Which Came to India From Iran. However, It’s Origins Are Traced to the shat Tantri Veena ( 100 Stringed Lute ) or the Pinaki Veena Which Is Mentioned In India’s Oldest Religious Work. This Ancient Tool of Music, When Played In The Hands of Devoted Artist Evokes Scintillating Melodies Of Timeless Purity.</p>
+                        </div> 
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="open-time">
+                            <h2>Opening Time</h2>
+                            <p>Saturday 5:30pm - 10:30pm</p>
+                            <p>Sunday 5:30pm - 9:30pm</p>
+                            <p>Monday Closed</p>
+                            <p>Tuesday 5:30pm - 10:30pm</p>
+                            <p>Wednesday 5:30pm - 10:30pm</p>
+                            <p>Thursday 5:30pm - 10:30pm</p>
+                            <p>Friday 5:30pm - 10:30pm</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="contact">
+                            <h2>Contact Us</h2>
+                            <p>House No.#, Road No.#, Mirpur Road,
+                                Dhanmondi, Dhaka-1209,
+                                Bangladesh.</p>
+                            <p>01685668987,
+                                01845187953</p>
+                            <p>sirestaurant@yahoo.com</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <div class="newsletter">
+                            <h2>Newsletter</h2>
+                            <p>Heaven fruitful doesn't over lesser in days. Appear creeping seas</p>
+                            <nav class="navbar navbar-light px-0">
+                                <form class="form-inline btn-b">
+                                    <input class="form-control " type="search" placeholder="" aria-label="Search"></input>
+                                    <input class="btn btn-outline-success btn-a my-2 my-sm-0" style="display: inline-block;" type="submit"></input>
+                                </form>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer -->
+
+
+        <script src="vendors/js/jquery-1.12.4.min.js"></script>
+        <script src="vendors/js/venobox.min.js"></script>
+        <script src="vendors/js/bootstrap.bundle.min.js"></script>
+        <script src="js/custom.js"></script>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </h:body>
+</html>

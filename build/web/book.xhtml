@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>S I Restaurant</title>
+        <link rel="stylesheet" href="/css/style.css"></link>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></link>
+    </h:head>
+    <h:body>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light list">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.xhtml">S I Restaurant</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto item">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.xhtml">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.xhtml">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.xhtml">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chefs.xhtml">Chefs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.xhtml">Contact</a>
+                    </li>
+                    <li class="nav-item book-btn">
+                        <a class="nav-link" href="book.xhtml">Book Your Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adminlogin.xhtml">Admin Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="userlogin.xhtml">User Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+    
+    <!-- table book -->
+    <!-- MultiStep Form -->
+    <div class="container-fluid" id="grad1">
+        <div class="row justify-content-center mt-0">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3 table-text">
+                    <h3>Reservation</h3>
+                    <h1>book your table</h1>
+                    <p>Please Contact (01685668987) or submit the form here we will contact to you soon for your
+                        reservetion.</p>
+                    <div class="row">
+                        <div class="col-md-12 mx-0">
+                            <form id="msform">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="account"><strong>Account</strong></li>
+                                    <li id="personal"><strong>Personal</strong></li>
+                                    <li id="payment"><strong>Payment</strong></li>
+                                    <li id="confirm"><strong>Finish</strong></li>
+                                </ul> <!-- fieldsets -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <input type="text" name="uname" placeholder="Your Name" ></input> <input type="email"
+                                                                                                          name="email" placeholder="Email Id" ></input> <input type="password" name="pwd"
+                                            placeholder="Password" ></input> <input type="password" name="cpwd"
+                                            placeholder="Confirm Password" ></input>
+                                        <div class="row">
+                                            <div class="col-lg-6 form-d">
+                                                <input type="date" name="uname" placeholder="Date" ></input>
+                                            </div>
+                                            <div class="col-lg-6 form-d">
+                                                <input type="text" name="uname" placeholder="Time" ></input>
+                                            </div>
+                                        </div>
+                                    </div> <input type="button" name="next" class="next action-button"
+                                        value="Next Step" ></input>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Personal Information</h2> <input type="text" name="fname"
+                                            placeholder="First Name" ></input> <input type="text" name="lname"
+                                            placeholder="Last Name" ></input> <input type="text" name="phno"
+                                            placeholder="Contact No." ></input> <input type="text" name="phno_2"
+                                            placeholder="Alternate Contact No." ></input>
+                                    </div> <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" ></input> <input type="button" name="next" class="next action-button"
+                                        value="Next Step" ></input>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Payment Information</h2>
+                                        <div class="radio-group">
+                                            <div class='radio' data-value="credit"><img
+                                                    src="https://i.imgur.com/XzOzVHZ.jpg" width="200px" height="100px"></img>
+                                            </div>
+                                            <div class='radio' data-value="paypal"><img
+                                                    src="https://i.imgur.com/jXjwZlj.jpg" width="200px" height="100px"></img>
+                                            </div> <br/>
+                                        </div> <label class="pay">Card Holder Name*</label> <input type="text" name="holdername" placeholder="" ></input>
+                                        <div class="row">
+                                            <div class="col-9"> <label class="pay">Card Number*</label> <input
+                                                    type="text" name="cardno" placeholder="" ></input> </div>
+                                            <div class="col-3"> <label class="pay">CVC*</label> <input type="password"
+                                                    name="cvcpwd" placeholder="***" ></input> </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3"> <label class="pay">Expiry Date*</label> </div>
+                                            <div class="col-9"> <select class="list-dt" id="month" name="expmonth">
+                                                    <option>Month</option>
+                                                    <option>January</option>
+                                                    <option>February</option>
+                                                    <option>March</option>
+                                                    <option>April</option>
+                                                    <option>May</option>
+                                                    <option>June</option>
+                                                    <option>July</option>
+                                                    <option>August</option>
+                                                    <option>September</option>
+                                                    <option>October</option>
+                                                    <option>November</option>
+                                                    <option>December</option>
+                                                </select> <select class="list-dt" id="year" name="expyear">
+                                                    <option>Year</option>
+                                                </select> </div>
+                                        </div>
+                                    </div> <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" ></input> <input type="button" name="make_payment"
+                                        class="next action-button" value="Confirm" ></input>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title text-center">Success !</h2> <br/>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3"> <img
+                                                    src="https://img.icons8.com/color/96/000000/ok--v2.png"
+                                                    class="fit-image"></img> </div>
+                                        </div> <br/>
+                                        <div class="row justify-content-center">
+                                            <div class="col-7 text-center">
+                                                <h5>You Have Successfully Signed Up</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- table book -->
+    
+     <!-- footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 pl-0">
+                    <div class="about-us">
+                        <a href="">S I Restaurant</a>
+                        <p>S I Restaurant Is A Popular Instrument of Folk Sufi Music In Kashmir Which Came to India
+                            From Iran. However, It’s Origins Are Traced to the shat Tantri Veena ( 100 Stringed Lute )
+                            or the Pinaki Veena Which Is Mentioned In India’s Oldest Religious Work. This Ancient Tool
+                            of Music, When Played In The Hands of Devoted Artist Evokes Scintillating Melodies Of
+                            Timeless Purity.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="open-time">
+                        <h2>Opening Time</h2>
+                        <p>Saturday 5:30pm - 10:30pm</p>
+                        <p>Sunday 5:30pm - 9:30pm</p>
+                        <p>Monday Closed</p>
+                        <p>Tuesday 5:30pm - 10:30pm</p>
+                        <p>Wednesday 5:30pm - 10:30pm</p>
+                        <p>Thursday 5:30pm - 10:30pm</p>
+                        <p>Friday 5:30pm - 10:30pm</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="contact">
+                        <h2>Contact Us</h2>
+                        <p>House No.#, Road No.#, Mirpur Road,
+                            Dhanmondi, Dhaka-1209,
+                            Bangladesh.</p>
+                        <p>01685668987,
+                            01845187953</p>
+                        <p>sirestaurant@yahoo.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="newsletter">
+                        <h2>Newsletter</h2>
+                        <p>Heaven fruitful doesn't over lesser in days. Appear creeping seas</p>
+                        <nav class="navbar navbar-light px-0">
+                            <form class="form-inline btn-b">
+                                <input class="form-control " type="search" placeholder="" aria-label="Search"></input>
+                              <input class="btn btn-outline-success btn-a my-2 my-sm-0" style="display: inline-block;" type="submit"></input>
+                            </form>
+                          </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+    
+     <script src="vendors/js/jquery-1.12.4.min.js"></script>
+    <script src="vendors/js/venobox.min.js"></script>
+    <script src="vendors/js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </h:body>
+</html>
